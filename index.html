@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InsulinPro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💉 InsulinPro 💉</h1>
+      <p>Deine professionelle Hilfe für Insulinberechnungen!</p>
+    </header>
+
+    <!-- Hauptformular -->
+    <form id="insulin-form">
+      <div class="form-group">
+        <label for="kh">🍏 Wie viele Kohlenhydrate isst du?</label>
+        <input type="number" id="kh" name="kh" step="0.01" placeholder="z. B. 75" required>
+      </div>
+
+      <div class="form-group">
+        <label for="aktuellerBZ">💉 Dein Blutzuckerwert (mmol/l):</label>
+        <input type="number" id="aktuellerBZ" name="aktuellerBZ" step="0.1" placeholder="z. B. 8.1" required>
+      </div>
+
+      <button type="submit">🎉 Insulin berechnen!</button>
+    </form>
+
+    <!-- Ergebnis -->
+    <div id="result" class="result"></div>
+
+    <!-- Verlauf -->
+    <h2>📜 Verlauf</h2>
+    <table id="historyTable" class="history-table">
+      <thead>
+        <tr>
+          <th>Datum</th>
+          <th>Kohlenhydrate</th>
+          <th>Blutzucker</th>
+          <th>Gesamtinsulin</th>
+          <th>Löschen</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Verlaufseinträge werden hier angezeigt -->
+      </tbody>
+    </table>
+    <button id="clearHistory">🗑️ Verlauf löschen</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
